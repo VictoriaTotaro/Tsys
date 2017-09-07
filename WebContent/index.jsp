@@ -27,7 +27,11 @@
 	  
   	  <%@ include file="compartilhado/menu.jsp" %>
 	  
-	  
+	  <c:forEach var="n" items="${lista}">
+			<tr>
+			<td>${n}</td>
+			</tr>
+	  </c:forEach>
 	  <!-- Conteudo -->
 	  <div class="content-wrapper">
 	    <!-- Content Header (Page header) -->
