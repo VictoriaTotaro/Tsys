@@ -38,18 +38,22 @@
 	        <li class="active">Cadastrar Cliente</li>
 	      </ol>
 	    </section>
-	
-	    <!-- Main content -->
 	    <section class="content">
 	    
-	        <div class="box-body">
-                <!-- text input -->
-                <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
+	  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#pFisica">Pessoa Física</a></li>
+    <li><a data-toggle="tab" href="#pJuridica">Pessoa Jurídica</a></li>
+
+  </ul>
+
+  <div class="tab-content">
+    <div id="pFisica" class="tab-pane fade in active">
+              <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
                   <label>Nome</label>
                   <input type="text" class="form-control" id="nome" placeholder="Nome">
                   <hr>
-                  <label>CPF/CNPJ</label>
-                  <input type="text" class="form-control" id="cpf" placeholder="CPF ou CNPJ">
+                  <label>CPF</label>
+                  <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
                   <hr>
                   <label>E-mail</label>
                   <input type="text" class="form-control" id="email" placeholder="Email">
@@ -66,9 +70,36 @@
 	              	</span>
                   
                 </div>
-            </div>
-	    
-	
+    </div>
+   
+   
+    <div id="pJuridica" class="tab-pane fade">
+		                <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
+                  <label>CNPJ</label>
+                  <input type="text" class="form-control" id="nome" placeholder="Digite o CNPJ">
+                  <hr>
+                  <label>Razão Social</label>
+                  <input type="text" class="form-control" id="cpf" placeholder="Razão Social">
+                  <hr>
+                  <label>CEP</label>
+                  <input type="text" class="form-control" id="email" placeholder="Digite o CEP">
+                  <hr>
+                  <label>Telefone</label>
+                  <input type="text" class="form-control" id="telefone" placeholder="Telefone">
+                  <hr>
+                  <label>Endereço</label>
+                  <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                  <hr>
+                  <label>E-mail</label>
+                  <input type="text" class="form-control" id="endereco" placeholder="Digite o E-mail">
+                  <hr>
+	               	<span class="input-group-btn">
+		                <button type="button" id="cadastrar2" class="btn btn-primary">Cadastrar
+		                </button>
+	              	</span>
+                  
+                </div>
+    </div>
 	    </section>
 	    <!-- /.content -->
 	  </div>
@@ -90,5 +121,13 @@
 	});
 		
 	</script>
+	
+	<script>
+		$("#cadastrar2").click(function() {
+		swal("Cadastro Realizado com Sucesso! ;)", "ID do Cliente: 987654321", "success")
+	});
+		
+	</script>
+	
 </body>
 </html>
