@@ -41,14 +41,16 @@
 	    <section class="content">
 	    
 	  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#pFisica">Pessoa Física</a></li>
-    <li><a data-toggle="tab" href="#pJuridica">Pessoa Jurídica</a></li>
+	    <li class="active"><a data-toggle="tab" href="#pFisica">Pessoa Física</a></li>
+	    <li><a data-toggle="tab" href="#pJuridica">Pessoa Jurídica</a></li>
+	
+	  </ul>
 
-  </ul>
-
-  <div class="tab-content">
-    <div id="pFisica" class="tab-pane fade in active">
-              <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
+	  <div class="tab-content">
+	    <div id="pFisica" class="tab-pane fade in active">
+	    <form action="cadastrarPF" method="post">
+             <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
+             
                   <label>Nome</label>
                   <input type="text" class="form-control" id="nome" placeholder="Nome">
                   <hr>
@@ -64,59 +66,61 @@
                   <label>Endereço</label>
                   <input type="text" class="form-control" id="endereco" placeholder="Endereço">
                   <hr>
-	               	<span class="input-group-btn">
-		                <button type="button" id="cadastrar" class="btn btn-primary">Cadastrar
-		                </button>
-	              	</span>
-                  
-                </div>
-    </div>
-   
-   
-    <div id="pJuridica" class="tab-pane fade">
-		                <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
-                  <label>CNPJ</label>
-                  <input type="text" class="form-control" id="nome" placeholder="Digite o CNPJ">
-                  <hr>
-                  <label>Razão Social</label>
-                  <input type="text" class="form-control" id="cpf" placeholder="Razão Social">
-                  <hr>
-                  <label>CEP</label>
-                  <input type="text" class="form-control" id="email" placeholder="Digite o CEP">
-                  <hr>
-                  <label>Telefone</label>
-                  <input type="text" class="form-control" id="telefone" placeholder="Telefone">
-                  <hr>
-                  <label>Endereço</label>
-                  <input type="text" class="form-control" id="endereco" placeholder="Endereço">
-                  <hr>
-                  <label>E-mail</label>
-                  <input type="text" class="form-control" id="endereco" placeholder="Digite o E-mail">
-                  <hr>
-	               	<span class="input-group-btn">
-		                <button type="button" id="cadastrar2" class="btn btn-primary">Cadastrar
-		                </button>
-	              	</span>
-                  
-                </div>
+               	<span class="input-group-btn">
+	                <button type="submit" id="cadastrar" class="btn btn-primary">Cadastrar
+	                </button>
+              	</span>
+	                  
+	                </div>
+	    </form>
+	    </div>
+	   
+	   
+	    <div id="pJuridica" class="tab-pane fade">
+	              <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
+	                  <label>CNPJ</label>
+	                  <input type="text" class="form-control" id="nome" placeholder="Digite o CNPJ">
+	                  <hr>
+	                  <label>Razão Social</label>
+	                  <input type="text" class="form-control" id="cpf" placeholder="Razão Social">
+	                  <hr>
+	                  <label>CEP</label>
+	                  <input type="text" class="form-control" id="email" placeholder="Digite o CEP">
+	                  <hr>
+	                  <label>Telefone</label>
+	                  <input type="text" class="form-control" id="telefone" placeholder="Telefone">
+	                  <hr>
+	                  <label>Endereço</label>
+	                  <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+	                  <hr>
+	                  <label>E-mail</label>
+	                  <input type="text" class="form-control" id="endereco" placeholder="Digite o E-mail">
+	                  <hr>
+		               	<span class="input-group-btn">
+			                <button type="button" id="cadastrar2" class="btn btn-primary">Cadastrar
+			                </button>
+		              	</span>
+	                  
+	                </div>
+	    </div>
     </div>
 	    </section>
 	    <!-- /.content -->
-	  </div>
 	  <!-- /.Conteudo -->
 	  
 	  
-	  
+
+		</div>
 	  <%@ include file="compartilhado/rodape.jsp" %>
 	  
 	  
 	  <%@ include file="compartilhado/temas.jsp" %>
-	</div>
+	  </div>
 	<!-- ./wrapper -->
 	
 	<%@ include file="layouts/layoutJS.jsp" %>
 	<script>
-		$("#cadastrar").click(function() {
+		$("#cadastrar").onsubmit(function() {
 		swal("Cadastro Realizado com Sucesso! ;)", "ID do Cliente: 987654321", "success")
 	});
 		
