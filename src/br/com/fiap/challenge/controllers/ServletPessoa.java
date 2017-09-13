@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Class1
+ * Servlet implementation class ServletPessoa
  */
-@WebServlet("/exemplo")
-public class Class1 extends HttpServlet {
+@WebServlet("/pessoa")
+public class ServletPessoa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Class1() {
+    public ServletPessoa() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,6 +27,15 @@ public class Class1 extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String x = request.getMethod();
+		if (x.equals("POST")) {
+			System.out.println("POST");
+			
+			
+		} else {
+			System.out.println("GET");
+
+		}
 	}
 
 }

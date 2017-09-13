@@ -48,7 +48,7 @@
 
 	  <div class="tab-content">
 	    <div id="pFisica" class="tab-pane fade in active">
-	    <form action="cadastrarPF" method="post">
+	    <form action="pessoa" method="post">
              <div class="form-group col-lg-5 col-md-5 col-sm-7 col-3">
              
                   <label>Nome</label>
