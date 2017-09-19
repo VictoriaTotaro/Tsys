@@ -67,7 +67,7 @@
                   <input type="text" class="form-control" id="endereco" placeholder="Endereço">
                   <hr>
                	<span class="input-group-btn">
-	                <button type="submit" id="cadastrar" class="btn btn-primary">Cadastrar
+	                <button type="button" id="cadastrar" class="btn btn-primary">Cadastrar
 	                </button>
               	</span>
 	                  
@@ -120,7 +120,7 @@
 	
 	<%@ include file="layouts/layoutJS.jsp" %>
 	<script>
-		$("#cadastrar").onsubmit(function() {
+		$("#cadastrar").click(function() {
 		swal("Cadastro Realizado com Sucesso! ;)", "ID do Cliente: 987654321", "success")
 	});
 		
